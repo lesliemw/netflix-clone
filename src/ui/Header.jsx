@@ -6,6 +6,9 @@ const StyledHeader = styled.header`
   width: 100%;
   gap: 2.4rem;
   z-index: 100;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
 `;
 
 function Header() {

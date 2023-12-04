@@ -6,8 +6,12 @@ const GlobalStyles = createGlobalStyle`
     --color-dark-red:#B81D24;
     --color-light-black:#221F1F;
     --color-white:#F5F5F1;
+    --color-pure-white:#FFFFFF;
     --color-focus-white: #FEFEFE;
-    --color-dark-white:#d1d1cf;}
+    --color-dark-white:#d1d1cf;
+    --color-dark-white-opacity:rgba(209, 209, 207, 0.6);
+    --color-dark-white-moreOpacity:rgba(209, 209, 207, 0.3);
+    }
 }
 
 *,

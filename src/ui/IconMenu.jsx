@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SlMagnifier } from "react-icons/sl";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaRegBell } from "react-icons/fa6";
 import { LuUserSquare } from "react-icons/lu";
 
@@ -9,7 +9,7 @@ const StyledIconMenu = styled.ul`
   place-content: end;
   &,
   li {
-    padding: 0 20px;
+    padding: 0 15px;
     font-size: 2rem;
   }
 
@@ -24,7 +24,7 @@ function IconMenu() {
   return (
     <StyledIconMenu>
       <li>
-        <SlMagnifier />
+        <FaMagnifyingGlass />
       </li>
       <li>
         <FaRegBell />
