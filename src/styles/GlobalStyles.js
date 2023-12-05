@@ -14,6 +14,9 @@ const GlobalStyles = createGlobalStyle`
     }
 }
 
+:root::-webkit-scrollbar {
+    display: none;
+}
 *,
 *::before,
 *::after {
