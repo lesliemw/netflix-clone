@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyleCarouselImage = styled.div`
+const StyleCarouselImage = styled.img`
   height: 120px;
   width: 225px;
   background-color: var(--color-pure-white);
@@ -14,7 +14,7 @@ const StyleCarouselImage = styled.div`
 `;
 
 function CarouselImage() {
-  return <StyleCarouselImage></StyleCarouselImage>;
+  return <StyleCarouselImage />;
 }
 
 export default CarouselImage;

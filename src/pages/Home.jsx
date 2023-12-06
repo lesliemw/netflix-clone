@@ -11,6 +11,10 @@ function Home() {
     <StyledHomeScreen>
       <HomeScreenText />
       <NetflixCarousel />
+      <NetflixCarousel />
+      <NetflixCarousel />
+      <NetflixCarousel />
+      <NetflixCarousel />
     </StyledHomeScreen>
   );
 }
