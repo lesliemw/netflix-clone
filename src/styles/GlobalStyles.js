@@ -41,6 +41,7 @@ body {
   min-height: 100dvh;
   line-height: 1.5;
   font-size: 1.6rem;
+  
 }
 
 input,
@@ -63,6 +64,8 @@ button {
 button:has(svg) {
   line-height: 0;
 }
+
+
 
 a {
   color: inherit;
