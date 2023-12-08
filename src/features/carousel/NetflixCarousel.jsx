@@ -29,7 +29,7 @@ const StyledNetflixCarousel = styled.div`
   button {
     height: 120px;
     border: none;
-    background-color: rgb(22, 22, 22, 0.5);
+    background-color: rgb(22, 22, 22, 0.7);
     color: transparent;
     font-size: 5rem;
     position: absolute;

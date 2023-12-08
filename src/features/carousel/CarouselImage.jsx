@@ -14,7 +14,7 @@ const StyleCarouselImage = styled.img`
 `;
 
 function CarouselImage() {
-  return <StyleCarouselImage />;
+  return <StyleCarouselImage src="../../public/uncharted-poster.jpeg" />;
 }
 
 export default CarouselImage;
