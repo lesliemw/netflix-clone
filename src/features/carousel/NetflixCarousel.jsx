@@ -2,6 +2,7 @@ import styled from "styled-components";
 import CarouselImage from "./CarouselImage";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useState } from "react";
+import useImages from "./useImages";
 
 const StyledNetflixCarousel = styled.div`
   width: 100%;
@@ -49,7 +50,8 @@ const StyledNetflixCarousel = styled.div`
   }
 `;
 
-function NetflixCarousel() {
+function NetflixCarousel({ id }) {
+  const { usePopularImages } = useImages();
   const [activeIndex, setActiveIndex] = useState(0);
 
   function updateIndex(newIndex) {
@@ -73,14 +75,16 @@ function NetflixCarousel() {
           className="container"
           style={{ transform: `translate(-${activeIndex * 100}%)` }}
         >
-          <CarouselImage>1</CarouselImage>
+        {usePopularImages.id.map((id,i)=>
+        <CarouselImage src={}/>)}
+          {/* <CarouselImage>1</CarouselImage>
           <CarouselImage>2</CarouselImage>
           <CarouselImage>3</CarouselImage>
           <CarouselImage>4</CarouselImage>
           <CarouselImage>5</CarouselImage>
           <CarouselImage>6</CarouselImage>
           <CarouselImage>7</CarouselImage>
-          <CarouselImage>8</CarouselImage>
+          <CarouselImage>8</CarouselImage> */}
         </div>
         <button className="right" onClick={() => updateIndex(activeIndex + 1)}>
           <FaChevronRight />

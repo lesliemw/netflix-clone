@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyleCarouselImage = styled.img`
+const StyledCarouselImage = styled.img`
   height: 120px;
   width: 225px;
   background-color: var(--color-pure-white);
@@ -13,8 +13,8 @@ const StyleCarouselImage = styled.img`
   }
 `;
 
-function CarouselImage() {
-  return <StyleCarouselImage src="../../public/uncharted-poster.jpeg" />;
+function CarouselImage({ src, key }) {
+  return <StyledCarouselImage src={src} key={key} />;
 }
 
 export default CarouselImage;

@@ -35,7 +35,7 @@ html {
 body {
   font-family: 'Bebas Neue', sans-serif;
   font-family: 'Montserrat', sans-serif;
-  color: var(--color-light-red);
+  color: var(--color-white);
   background-color: var(--color-light-black);
   transition: color 0.3s, background-color 0.3s;
   min-height: 100dvh;
