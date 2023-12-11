@@ -6,7 +6,6 @@ export async function getPopularMovies() {
     `${baseUrl}/movie/popular?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
   );
   const popularMovies = await response.json();
-  console.log(popularMovies);
   return popularMovies;
 }
 getPopularMovies();
@@ -29,3 +28,12 @@ export async function getWorthTheWaitMovies() {
   return topMovies;
 }
 getWorthTheWaitMovies();
+
+export async function getTrendingMovies() {
+  const response = await fetch(
+    `${baseUrl}/trending/movie/day?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
+  );
+  const moviesTrendingToday = await response.json();
+  return moviesTrendingToday;
+}
+getTrendingMovies();
