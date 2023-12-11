@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import CarouselImage from "./CarouselImage";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+
+import MappedComponents from "./MappedComponents";
 import { useState } from "react";
-import usePopularTvShows from "./usePopularTvShows";
-import useTopRatedTvShows from "./useTopRatedTvShows";
 
 const StyledNetflixCarousel = styled.div`
   width: 100%;
@@ -51,12 +50,8 @@ const StyledNetflixCarousel = styled.div`
   }
 `;
 
-const imgUrl = "https://image.tmdb.org/t/p/w342";
-
-function NetflixCarousel({ title }) {
+function NetflixCarousel({ title, type }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const { tvShowsByPopularity } = usePopularTvShows();
-  const { tvShowsByRating } = useTopRatedTvShows();
 
   function updateIndex(newIndex) {
     if (newIndex < 0) {
@@ -79,22 +74,7 @@ function NetflixCarousel({ title }) {
           className="container"
           style={{ transform: `translate(-${activeIndex * 100}%)` }}
         >
-          <div>
-            {tvShowsByPopularity.map((img) => (
-              <CarouselImage
-                key={img.id}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
-          </div>
-          <div>
-            {tvShowsByRating.map((img) => (
-              <CarouselImage
-                key={img.id}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
-          </div>
+          <MappedComponents type={type} />
         </div>
         <button className="right" onClick={() => updateIndex(activeIndex + 1)}>
           <FaChevronRight />

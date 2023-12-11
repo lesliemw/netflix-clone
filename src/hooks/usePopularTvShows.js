@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPopularTvShows } from "../../services/apiTvShows";
+import { getPopularTvShows } from "../services/apiTvShows";
 import { useEffect, useState } from "react";
 
 function usePopularTvShows() {

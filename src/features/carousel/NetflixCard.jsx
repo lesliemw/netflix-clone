@@ -3,7 +3,7 @@ import { IoPlayCircleSharp } from "react-icons/io5";
 import { CiCirclePlus } from "react-icons/ci";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { TfiArrowCircleDown } from "react-icons/tfi";
-import usePopularTvShows from "./usePopularTvShows";
+import usePopularTvShows from "../../hooks/usePopularTvShows";
 import Spinner from "../../ui/Spinner";
 
 const StyledWrapper = styled.section`

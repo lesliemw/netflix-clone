@@ -1,13 +1,31 @@
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjgwMGYxMTRhODBkMTg2MjVhYzc3Mjk2ODQ3MTM3ZSIsInN1YiI6IjY1NmQwZTc2MDg1OWI0MDEzOTUxZmE2NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._4qczGIXYo6wAShJiJlOzqVTEtvbWEfqSpIfA6IXDeM",
-  },
-};
+const baseUrl = "https://api.themoviedb.org/3";
 
-fetch("https://api.themoviedb.org/3/authentication", options)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+//fetch most popular tv shows
+export async function getPopularMovies() {
+  const response = await fetch(
+    `${baseUrl}/movie/popular?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
+  );
+  const popularMovies = await response.json();
+  console.log(popularMovies);
+  return popularMovies;
+}
+getPopularMovies();
+
+//fetch highest rated tv shows
+export async function getTopRatedMovies() {
+  const response = await fetch(
+    `${baseUrl}/movie/top_rated?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
+  );
+  const topMovies = await response.json();
+  return topMovies;
+}
+getTopRatedMovies();
+
+export async function getWorthTheWaitMovies() {
+  const response = await fetch(
+    `${baseUrl}/movie/upcoming?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
+  );
+  const topMovies = await response.json();
+  return topMovies;
+}
+getWorthTheWaitMovies();

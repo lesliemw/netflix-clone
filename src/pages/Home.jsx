@@ -12,7 +12,11 @@ function Home() {
   return (
     <StyledHomeScreen>
       <HomeScreenText />
-      <NetflixCarousel title="Popular TV Programmes" />
+      <NetflixCarousel type="popular" title="Popular TV Programmes" />
+      <NetflixCarousel type="rating" title="Top Rated TV Programmes" />
+      <NetflixCarousel type="popularMovies" title="Popular Movies" />
+      <NetflixCarousel type="topRatedMovies" title="Top Rated Movies" />
+      <NetflixCarousel type="upcomingMovies" title="Worth the Wait" />
       <NetflixCard />
       <Footer />
     </StyledHomeScreen>

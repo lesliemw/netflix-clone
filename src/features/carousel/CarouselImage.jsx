@@ -13,8 +13,8 @@ const StyledCarouselImage = styled.img`
   }
 `;
 
-function CarouselImage({ src, key }) {
-  return <StyledCarouselImage src={src} key={key} />;
+function CarouselImage({ src }) {
+  return <StyledCarouselImage src={src} />;
 }
 
 export default CarouselImage;
