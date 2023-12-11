@@ -17,7 +17,7 @@ function HomeScreenImage() {
   return (
     <StyledHomeScreenImage
       alt="Nathan Drake and Sully on a boat surrounded by water"
-      src="../../public/uncharted-poster.jpeg"
+      src="../../uncharted-poster.jpeg"
     />
   );
 }

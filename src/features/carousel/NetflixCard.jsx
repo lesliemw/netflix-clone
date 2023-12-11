@@ -60,7 +60,7 @@ function NetflixCard() {
   return (
     <StyledWrapper>
       <div>
-        <img alt="" src="../../public/uncharted-poster.jpeg" />
+        <img alt="" src="../../uncharted-poster.jpeg" />
       </div>
       <div className="buttons">
         <button>

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeaderLinks = styled.ul`
@@ -25,12 +26,24 @@ const StyledHeaderLinks = styled.ul`
 function HeaderLinksMenu() {
   return (
     <StyledHeaderLinks>
-      <li>Home</li>
-      <li>Series</li>
-      <li>Films</li>
-      <li>New & Popular</li>
-      <li>My List</li>
-      <li>Browse by Languages</li>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/series">Series</NavLink>
+      </li>
+      <li>
+        <NavLink to="/films">Films</NavLink>
+      </li>
+      <li>
+        <NavLink to="/latest">New & Popular</NavLink>
+      </li>
+      <li>
+        <NavLink to="/my-list">My List</NavLink>
+      </li>
+      <li>
+        <NavLink to="/original-audio">Browse by Languages</NavLink>
+      </li>
     </StyledHeaderLinks>
   );
 }
