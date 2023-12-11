@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledCarouselImage = styled.img`
-  height: 120px;
-  width: 225px;
+  height: 150px;
+  width: 250px;
   background-color: var(--color-pure-white);
   margin-right: 5px;
   border-radius: 0.2rem;

@@ -3,7 +3,7 @@ import { IoPlayCircleSharp } from "react-icons/io5";
 import { CiCirclePlus } from "react-icons/ci";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { TfiArrowCircleDown } from "react-icons/tfi";
-import useTvShows from "./useTvShows";
+import usePopularTvShows from "./usePopularTvShows";
 import Spinner from "../../ui/Spinner";
 
 const StyledWrapper = styled.section`
@@ -51,7 +51,7 @@ const StyledWrapper = styled.section`
 `;
 
 function NetflixCard() {
-  const { tvShowsByPopularity, isLoading } = useTvShows();
+  const { tvShowsByPopularity, isLoading } = usePopularTvShows();
 
   // let tvShows = Object.entries(popularTvShows);
   // console.log(tvShows);

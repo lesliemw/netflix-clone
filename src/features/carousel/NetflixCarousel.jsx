@@ -2,7 +2,8 @@ import styled from "styled-components";
 import CarouselImage from "./CarouselImage";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useState } from "react";
-import useImages from "./useImages";
+import usePopularTvShows from "./usePopularTvShows";
+import useTopRatedTvShows from "./useTopRatedTvShows";
 
 const StyledNetflixCarousel = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const StyledNetflixCarousel = styled.div`
   }
 
   button {
-    height: 120px;
+    height: 150px;
     border: none;
     background-color: rgb(22, 22, 22, 0.7);
     color: transparent;
@@ -50,9 +51,12 @@ const StyledNetflixCarousel = styled.div`
   }
 `;
 
-function NetflixCarousel({ id }) {
-  const { usePopularImages } = useImages();
+const imgUrl = "https://image.tmdb.org/t/p/w342";
+
+function NetflixCarousel({ title }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { tvShowsByPopularity } = usePopularTvShows();
+  const { tvShowsByRating } = useTopRatedTvShows();
 
   function updateIndex(newIndex) {
     if (newIndex < 0) {
@@ -64,7 +68,7 @@ function NetflixCarousel({ id }) {
 
   return (
     <StyledNetflixCarousel>
-      <h1>Trending Now</h1>
+      <h1>{title}</h1>
       <div className="wrapper">
         {activeIndex !== 0 && (
           <button className="left" onClick={() => updateIndex(activeIndex - 1)}>
@@ -75,16 +79,22 @@ function NetflixCarousel({ id }) {
           className="container"
           style={{ transform: `translate(-${activeIndex * 100}%)` }}
         >
-        {usePopularImages.id.map((id,i)=>
-        <CarouselImage src={}/>)}
-          {/* <CarouselImage>1</CarouselImage>
-          <CarouselImage>2</CarouselImage>
-          <CarouselImage>3</CarouselImage>
-          <CarouselImage>4</CarouselImage>
-          <CarouselImage>5</CarouselImage>
-          <CarouselImage>6</CarouselImage>
-          <CarouselImage>7</CarouselImage>
-          <CarouselImage>8</CarouselImage> */}
+          <div>
+            {tvShowsByPopularity.map((img) => (
+              <CarouselImage
+                key={img.id}
+                src={imgUrl + `${img.backdrop_path}`}
+              />
+            ))}
+          </div>
+          <div>
+            {tvShowsByRating.map((img) => (
+              <CarouselImage
+                key={img.id}
+                src={imgUrl + `${img.backdrop_path}`}
+              />
+            ))}
+          </div>
         </div>
         <button className="right" onClick={() => updateIndex(activeIndex + 1)}>
           <FaChevronRight />

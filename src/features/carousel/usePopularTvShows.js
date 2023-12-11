@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getPopularTvShows } from "../../services/apiTvShows";
 import { useEffect, useState } from "react";
 
-function useTvShows() {
+function usePopularTvShows() {
   const [tvShowsByPopularity, setTvShowsByPopularity] = useState([]);
   const {
     isLoading,
@@ -23,4 +23,4 @@ function useTvShows() {
   return { isLoading, error, tvShowsByPopularity };
 }
 
-export default useTvShows;
+export default usePopularTvShows;

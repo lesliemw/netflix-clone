@@ -1,5 +1,4 @@
 const baseUrl = "https://api.themoviedb.org/3";
-// const imgUrl = `https://image.tmdb.org/t/p/w225/h120/${tvShowsByPopularity.poster_path}`;
 
 export async function getPopularTvShows() {
   const response = await fetch(
@@ -9,3 +8,12 @@ export async function getPopularTvShows() {
   return popularTvShows;
 }
 getPopularTvShows();
+
+export async function getTopRatedTvShows() {
+  const response = await fetch(
+    `${baseUrl}/tv/top_rated?language=en-US&page=1&api_key=e2800f114a80d18625ac77296847137e`
+  );
+  const topTvShows = await response.json();
+  return topTvShows;
+}
+getTopRatedTvShows();
