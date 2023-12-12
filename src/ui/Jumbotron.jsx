@@ -1,10 +1,22 @@
 import styled from "styled-components";
-import StyledButton from "../../ui/Button";
-import { FaPlay } from "react-icons/fa";
+import StyledButton from "./Button";
+import { FaPlay } from "react-icons/fa6";
 import { FiInfo } from "react-icons/fi";
-import HomeScreenImage from "./HomeScreenImage";
 
-const StyleHomeScreenText = styled.div`
+const StyledJumbotron = styled.img`
+  height: 100dvh;
+  width: 100dvw;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+`;
+
+const StyleJumbotronText = styled.div`
   z-index: 2;
   background-color: transparent;
   align-items: center;
@@ -35,17 +47,12 @@ const StyleHomeScreenText = styled.div`
   }
 `;
 
-function HomeScreenText() {
+function Jumbotron({ alt, src, children }) {
   return (
     <>
-      <HomeScreenImage />
-      <StyleHomeScreenText>
-        <h1>Uncharted</h1>
-        <p>
-          Street-smart Nathan Drake is recruited by seasoned treasure hunter
-          Victor &quot;Sully&quot; Sullivan to recover a fortune amassed by
-          Ferdinand Magellan, and lost 500 years ago by the House of Moncada.
-        </p>
+      <StyledJumbotron alt={alt} src={src} />
+      <StyleJumbotronText>
+        {children}
         <div className="buttonDiv">
           <StyledButton size="medium">
             <FaPlay className="icon" /> <span> Play</span>
@@ -54,9 +61,9 @@ function HomeScreenText() {
             <FiInfo className="icon" /> <span> More Info</span>
           </StyledButton>
         </div>
-      </StyleHomeScreenText>
+      </StyleJumbotronText>
     </>
   );
 }
 
-export default HomeScreenText;
+export default Jumbotron;

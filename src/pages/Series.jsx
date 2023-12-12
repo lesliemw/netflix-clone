@@ -1,5 +1,7 @@
+import SeriesScreen from "../features/series/SeriesScreen";
+
 function Series() {
-  return <div>Series</div>;
+  return <SeriesScreen />;
 }
 
 export default Series;

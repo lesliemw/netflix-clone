@@ -1,4 +1,4 @@
-import HomeScreenText from "../features/home/HomeScreenText";
+import HomeScreen from "../features/home/HomeScreen";
 import styled from "styled-components";
 import Footer from "../ui/Footer";
 import NetflixCard from "../features/carousel/NetflixCard";
@@ -11,7 +11,7 @@ const StyledHomeScreen = styled.main`
 function Home() {
   return (
     <StyledHomeScreen>
-      <HomeScreenText />
+      <HomeScreen />
       <NetflixCarousel type="popular" title="Popular TV Programmes" />
       <NetflixCarousel type="rating" title="Top Rated TV Programmes" />
       <NetflixCarousel type="popularMovies" title="Popular Movies" />
