@@ -51,7 +51,7 @@ const StyledWrapper = styled.section`
 `;
 
 function NetflixCard() {
-  const { tvShowsByPopularity, isLoading } = usePopularTvShows();
+  const { isLoading } = usePopularTvShows();
 
   // let tvShows = Object.entries(popularTvShows);
   // console.log(tvShows);
@@ -77,10 +77,8 @@ function NetflixCard() {
         </button>
       </div>
       <div className="information">
-        {tvShowsByPopularity.map((shows) => (
-          <div key={shows.id}>{shows.name}</div>
-        ))}
-        <div>Genre</div>
+        <div>Name</div>
+        <div>Genres</div>
       </div>
     </StyledWrapper>
   );

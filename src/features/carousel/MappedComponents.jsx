@@ -5,6 +5,8 @@ import usePopularMovies from "../../hooks/usePopularMovies";
 import useTopRatedMovies from "../../hooks/useTopRatedMovies";
 import useWorthTheWaitMovies from "../../hooks/useWorthTheWaitMovies";
 import useTrendingMovies from "../../hooks/useTrendingMovies";
+import useTrendingTv from "../../hooks/useTrendingTv";
+import useRecommendationsTv from "../../hooks/useRecommendationsTv";
 
 const imgUrl = "https://image.tmdb.org/t/p/w342";
 
@@ -15,6 +17,8 @@ function MappedComponents({ type }) {
   const { moviesByRating } = useTopRatedMovies();
   const { upcomingMovies } = useWorthTheWaitMovies();
   const { moviesTrending } = useTrendingMovies();
+  const { tvTrending } = useTrendingTv();
+  const { tvRecommendations } = useRecommendationsTv();
   return (
     <>
       <div>
@@ -77,6 +81,28 @@ function MappedComponents({ type }) {
         {type === "trendingMovies" && (
           <div>
             {moviesTrending.map((img) => (
+              <CarouselImage
+                key={img.id}
+                alt={`Poster for ${img.title}`}
+                src={imgUrl + `${img.backdrop_path}`}
+              />
+            ))}
+          </div>
+        )}
+        {type === "trendingTv" && (
+          <div>
+            {tvTrending.map((img) => (
+              <CarouselImage
+                key={img.id}
+                alt={`Poster for ${img.title}`}
+                src={imgUrl + `${img.backdrop_path}`}
+              />
+            ))}
+          </div>
+        )}
+        {type === "recommendations" && (
+          <div>
+            {tvRecommendations.map((img) => (
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}

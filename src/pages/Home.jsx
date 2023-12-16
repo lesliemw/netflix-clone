@@ -17,7 +17,7 @@ function Home() {
       <NetflixCarousel type="popularMovies" title="Popular Movies" />
       <NetflixCarousel type="topRatedMovies" title="Top Rated Movies" />
       <NetflixCarousel type="upcomingMovies" title="Worth the Wait" />
-      <NetflixCarousel type="trendingMovies" title="Movies Trending Today" />
+      <NetflixCarousel type="trendingMovies" title="Movies Trending Now" />
       <NetflixCard />
       <Footer />
     </StyledHomeScreen>

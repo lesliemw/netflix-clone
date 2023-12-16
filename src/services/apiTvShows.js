@@ -21,3 +21,23 @@ export async function getTopRatedTvShows() {
   return topTvShows;
 }
 getTopRatedTvShows();
+
+//fetch trending tv
+export async function getTrendingTv() {
+  const response = await fetch(
+    `${baseUrl}/trending/tv/week?language=en-US&page=1&api_key=${API}`
+  );
+  const tvTrendingToday = await response.json();
+  return tvTrendingToday;
+}
+getTrendingTv();
+
+//because you watched the crown
+export async function getRecommendationsTv() {
+  const response = await fetch(
+    `${baseUrl}/tv/65494/recommendations?language=en-US&page=1&api_key=${API}`
+  );
+  const tvRecommendationsToday = await response.json();
+  return tvRecommendationsToday;
+}
+getRecommendationsTv();
