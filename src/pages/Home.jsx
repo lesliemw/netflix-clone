@@ -1,7 +1,6 @@
 import HomeScreen from "../features/home/HomeScreen";
 import styled from "styled-components";
 import Footer from "../ui/Footer";
-import NetflixCard from "../features/carousel/NetflixCard";
 import NetflixCarousel from "../features/carousel/NetflixCarousel";
 
 const StyledHomeScreen = styled.main`
@@ -18,7 +17,6 @@ function Home() {
       <NetflixCarousel type="topRatedMovies" title="Top Rated Movies" />
       <NetflixCarousel type="upcomingMovies" title="Worth the Wait" />
       <NetflixCarousel type="trendingMovies" title="Movies Trending Now" />
-      <NetflixCard />
       <Footer />
     </StyledHomeScreen>
   );

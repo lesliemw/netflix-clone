@@ -7,7 +7,6 @@ import Series from "./pages/Series";
 import Films from "./pages/Films";
 import NewAndPopular from "./pages/NewAndPopular.";
 import MyList from "./pages/MyList";
-import BrowseByLanguage from "./pages/BrowseByLanguage";
 import Home from "./pages/Home";
 
 const queryClient = new QueryClient({
@@ -32,7 +31,6 @@ function App() {
             <Route path="films" element={<Films />} />
             <Route path="latest" element={<NewAndPopular />} />
             <Route path="my-list" element={<MyList />} />
-            <Route path="original-audio" element={<BrowseByLanguage />} />
           </Route>
         </Routes>
       </BrowserRouter>

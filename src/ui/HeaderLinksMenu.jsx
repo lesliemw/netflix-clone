@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledHeaderLinks = styled.ul`
   display: flex;
-  color: var(--color-white);
+  color: var(--color-dark-white);
   font-family: "Montserrat";
   font-size: 1.3rem;
   float: left;
@@ -13,12 +13,13 @@ const StyledHeaderLinks = styled.ul`
   li {
     padding: 0 10px;
   }
-  :focus {
-    color: var(--color-focus-white);
+  .active {
+    font-weight: 700;
+    color: #fff;
   }
   :hover {
     transition: color 500ms ease 0s;
-    color: var(--color-dark-white);
+    color: var(--color-white);
     cursor: pointer;
   }
 `;
@@ -40,9 +41,6 @@ function HeaderLinksMenu() {
       </li>
       <li>
         <NavLink to="/my-list">My List</NavLink>
-      </li>
-      <li>
-        <NavLink to="/original-audio">Browse by Languages</NavLink>
       </li>
     </StyledHeaderLinks>
   );

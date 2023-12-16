@@ -38,3 +38,22 @@ export async function getTrendingMovies() {
   return moviesTrendingToday;
 }
 getTrendingMovies();
+
+//because you watched Shawshank Redemption
+export async function getRecommendationsMovie() {
+  const response = await fetch(
+    `${baseUrl}/movie/280/recommendations?language=en-US&page=1&api_key=${API}`
+  );
+  const movieRecommendationsToday = await response.json();
+  return movieRecommendationsToday;
+}
+getRecommendationsMovie();
+
+export async function getLatestMovies() {
+  const response = await fetch(
+    `${baseUrl}/movie/latest?language=en-US&page=1&api_key=${API}`
+  );
+  const movieLatestToday = await response.json();
+  return movieLatestToday;
+}
+getLatestMovies();

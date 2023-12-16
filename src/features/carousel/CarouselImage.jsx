@@ -8,8 +8,9 @@ const StyledCarouselImage = styled.img`
   border-radius: 0.2rem;
   overflow: hidden;
 
-  :hover {
-    transform: scale(1.08);
+  &:hover {
+    transform: scale(1.2);
+    transition: all 500ms ease 0s;
   }
 `;
 
