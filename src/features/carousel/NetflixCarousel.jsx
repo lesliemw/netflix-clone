@@ -50,7 +50,7 @@ const StyledNetflixCarousel = styled.div`
   }
 `;
 
-function NetflixCarousel({ title, type, data }) {
+function NetflixCarousel({ title, type }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   function updateIndex(newIndex) {

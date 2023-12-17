@@ -5,15 +5,17 @@ import { BsHandThumbsUp } from "react-icons/bs";
 import { TfiArrowCircleDown } from "react-icons/tfi";
 import usePopularTvShows from "../../hooks/usePopularTvShows";
 import Spinner from "../../ui/Spinner";
+import { useState } from "react";
 
-const StyledWrapper = styled.section`
-  height: 40%;
-  width: 20%;
+const StyledWrapper = styled.div`
+  height: 120px;
+  width: 200px;
   color: #fff;
   background-color: var(--color-light-black);
   box-shadow: -2px 2px 26px 0px rgba(46, 45, 45, 0.64);
   -webkit-box-shadow: -2px 2px 26px 0px rgba(46, 45, 45, 0.64);
   -moz-box-shadow: -2px 2px 26px 0px rgba(46, 45, 45, 0.64);
+  position: relative;
 
   img {
     height: 100%;
@@ -33,6 +35,10 @@ const StyledWrapper = styled.section`
     display: flex;
     margin: 1rem;
   }
+  .buttons,
+  .information {
+    position: absolute;
+  }
 
   .play {
     color: #fff;
@@ -50,8 +56,9 @@ const StyledWrapper = styled.section`
   }
 `;
 
-function NetflixCard() {
+function NetflixCard({ alt, src }) {
   const { isLoading } = usePopularTvShows();
+  const [isHovered, setIsHovered] = useState();
 
   // let tvShows = Object.entries(popularTvShows);
   // console.log(tvShows);
@@ -60,26 +67,35 @@ function NetflixCard() {
   return (
     <StyledWrapper>
       <div>
-        <img alt="" src="../../uncharted-poster.jpeg" />
+        <img
+          alt={alt}
+          src={src}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        />
       </div>
-      <div className="buttons">
-        <button>
-          <IoPlayCircleSharp className="play" size={41} />
-        </button>
-        <button>
-          <CiCirclePlus className="add" size={41} />
-        </button>
-        <button>
-          <BsHandThumbsUp className="thumb" size={37} />
-        </button>
-        <button>
-          <TfiArrowCircleDown className="chevron" size={37} />
-        </button>
-      </div>
-      <div className="information">
-        <div>Name</div>
-        <div>Genres</div>
-      </div>
+      {isHovered && (
+        <>
+          <div className="buttons">
+            <button>
+              <IoPlayCircleSharp className="play" size={41} />
+            </button>
+            <button>
+              <CiCirclePlus className="add" size={41} />
+            </button>
+            <button>
+              <BsHandThumbsUp className="thumb" size={37} />
+            </button>
+            <button>
+              <TfiArrowCircleDown className="chevron" size={37} />
+            </button>
+          </div>
+          <div className="information">
+            <div>Title</div>
+            <div>Genre</div>
+          </div>
+        </>
+      )}
     </StyledWrapper>
   );
 }

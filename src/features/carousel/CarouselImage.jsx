@@ -1,4 +1,9 @@
 import styled from "styled-components";
+// import { IoPlayCircleSharp } from "react-icons/io5";
+// import { CiCirclePlus } from "react-icons/ci";
+// import { BsHandThumbsUp } from "react-icons/bs";
+// import { TfiArrowCircleDown } from "react-icons/tfi";
+import { useState } from "react";
 
 const StyledCarouselImage = styled.img`
   height: 150px;
@@ -7,6 +12,7 @@ const StyledCarouselImage = styled.img`
   margin-right: 5px;
   border-radius: 0.2rem;
   overflow: hidden;
+  object-fit: fill;
 
   &:hover {
     transform: scale(1.2);
@@ -15,7 +21,18 @@ const StyledCarouselImage = styled.img`
 `;
 
 function CarouselImage({ src }) {
-  return <StyledCarouselImage src={src} />;
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <>
+      <StyledCarouselImage
+        src={src}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        {...(isHovered && null)}
+      />
+    </>
+  );
 }
 
 export default CarouselImage;

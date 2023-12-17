@@ -12,7 +12,7 @@ import useLatestMovies from "../../hooks/useLatestMovie";
 
 const imgUrl = "https://image.tmdb.org/t/p/w342";
 
-function MappedComponents({ type }) {
+function MappedComponents({ type, src, alt }) {
   const { tvShowsByPopularity } = usePopularTvShows();
   const { tvShowsByRating } = useTopRatedTvShows();
   const { moviesByPopularity } = usePopularMovies();
@@ -23,20 +23,20 @@ function MappedComponents({ type }) {
   const { tvRecommendations } = useRecommendationsTv();
   const { movieRecommendations } = useRecommendationsMovie();
   const { moviesLatest } = useLatestMovies();
+
   return (
     <>
       <div>
         {type === "popular" && (
-          <div>
+          <>
             {tvShowsByPopularity.map((img) => (
               <CarouselImage
-                type="popular"
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
-          </div>
+          </>
         )}
         {type === "rating" && (
           <div>
@@ -44,7 +44,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -55,7 +55,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -66,7 +66,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -77,7 +77,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -88,7 +88,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -99,7 +99,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -110,7 +110,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -121,7 +121,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
@@ -132,7 +132,7 @@ function MappedComponents({ type }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
+                src={imgUrl + `${img.poster_path}`}
               />
             ))}
           </div>
