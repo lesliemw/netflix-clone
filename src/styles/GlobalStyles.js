@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
 :root {
     &{--color-light-red: #e50914;
     --color-dark-red:#B81D24;
+    --color-black: #000000;
     --color-light-black:#221F1F;
     --color-white:#F5F5F1;
     --color-pure-white:#FFFFFF;
@@ -36,7 +37,7 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   font-family: 'Montserrat', sans-serif;
   color: var(--color-white);
-  background-color: var(--color-light-black);
+  background-color: var(--color-black);
   transition: color 0.3s, background-color 0.3s;
   min-height: 100dvh;
   line-height: 1.5;

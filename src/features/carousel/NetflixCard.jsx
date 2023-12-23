@@ -5,6 +5,7 @@ import { BsHandThumbsUp } from "react-icons/bs";
 import { TfiArrowCircleDown } from "react-icons/tfi";
 import usePopularTvShows from "../../hooks/usePopularTvShows";
 import Spinner from "../../ui/Spinner";
+import CarouselImage from "./CarouselImage";
 import { useState } from "react";
 
 const StyledWrapper = styled.div`
@@ -16,6 +17,13 @@ const StyledWrapper = styled.div`
   -webkit-box-shadow: -2px 2px 26px 0px rgba(46, 45, 45, 0.64);
   -moz-box-shadow: -2px 2px 26px 0px rgba(46, 45, 45, 0.64);
   position: relative;
+
+  &:hover {
+    height: 180px;
+    width: 300px;
+    background-color: var(--color-light-black);
+    z-index: 4;
+  }
 
   img {
     height: 100%;
@@ -33,11 +41,14 @@ const StyledWrapper = styled.div`
   }
   .buttons {
     display: flex;
-    margin: 1rem;
+    padding-left: 15px;
+    padding-top: 5px;
+    /* margin: 1rem; */
   }
-  .buttons,
-  .information {
-    position: absolute;
+  .details {
+    height: 150px;
+    width: 300px;
+    background-color: var(--color-light-black);
   }
 
   .play {
@@ -56,26 +67,23 @@ const StyledWrapper = styled.div`
   }
 `;
 
-function NetflixCard({ alt, src }) {
+function NetflixCard({ alt, src, title, releaseDate }) {
   const { isLoading } = usePopularTvShows();
-  const [isHovered, setIsHovered] = useState();
+  const [isHovered, setIsHovered] = useState(false);
 
   // let tvShows = Object.entries(popularTvShows);
   // console.log(tvShows);
 
   if (isLoading) return <Spinner />;
   return (
-    <StyledWrapper>
-      <div>
-        <img
-          alt={alt}
-          src={src}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        />
-      </div>
+    <StyledWrapper
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CarouselImage alt={alt} src={src} />
+
       {isHovered && (
-        <>
+        <div className="details">
           <div className="buttons">
             <button>
               <IoPlayCircleSharp className="play" size={41} />
@@ -91,10 +99,10 @@ function NetflixCard({ alt, src }) {
             </button>
           </div>
           <div className="information">
-            <div>Title</div>
-            <div>Genre</div>
+            <div>{title}</div>
+            <div>{releaseDate}</div>
           </div>
-        </>
+        </div>
       )}
     </StyledWrapper>
   );

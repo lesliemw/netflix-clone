@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
   height: fit-content;
   width: 100%;
   margin: 2rem;
-  background-color: var(--color-light-black);
+  background-color: var(--color-black);
   display: flex;
   flex-direction: column;
 
@@ -37,13 +37,13 @@ function Footer() {
         <a href="facebook.com">
           <FaFacebookF />
         </a>
-        <a href="facebook.com">
+        <a href="instagram.com">
           <FaInstagram />
         </a>
-        <a href="facebook.com">
+        <a href="twitter.com">
           <FaTwitter />
         </a>
-        <a href="facebook.com">
+        <a href="youtube.com">
           <FaYoutube />
         </a>
       </div>

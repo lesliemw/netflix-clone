@@ -29,112 +29,172 @@ function MappedComponents({ type, src, alt }) {
       <div>
         {type === "popular" && (
           <>
-            {tvShowsByPopularity.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {tvShowsByPopularity.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </>
         )}
         {type === "rating" && (
           <div>
-            {tvShowsByRating.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {tvShowsByRating.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "popularMovies" && (
           <div>
-            {moviesByPopularity.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {moviesByPopularity.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "topRatedMovies" && (
           <div>
-            {moviesByRating.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {moviesByRating.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "upcomingMovies" && (
           <div>
-            {upcomingMovies.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {upcomingMovies.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "trendingMovies" && (
           <div>
-            {moviesTrending.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {moviesTrending.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "trendingTv" && (
           <div>
-            {tvTrending.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {tvTrending.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "recommendations" && (
           <div>
-            {tvRecommendations.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {tvRecommendations.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "recommendationsMovie" && (
           <div>
-            {movieRecommendations.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {movieRecommendations.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
         {type === "latestMovie" && (
           <div>
-            {moviesLatest.map((img) => (
-              <CarouselImage
-                key={img.id}
-                alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.backdrop_path}`}
-              />
-            ))}
+            {moviesLatest.map(
+              (item) =>
+                item.backdrop_path && (
+                  <CarouselImage
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    releaseDate={item.release_date}
+                    alt={`Poster for ${item.title}`}
+                    src={imgUrl + `${item.backdrop_path}`}
+                  />
+                )
+            )}
           </div>
         )}
       </div>

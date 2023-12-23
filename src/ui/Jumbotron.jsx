@@ -6,13 +6,11 @@ import { FiInfo } from "react-icons/fi";
 const StyledJumbotron = styled.img`
   height: 100dvh;
   width: 100dvw;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)),
-    to(rgba(0, 0, 0, 0))
+  mask-image: linear-gradient(
+    360deg,
+    transparent,
+    rgba(37, 37, 37, 0.91),
+    #111
   );
 `;
 

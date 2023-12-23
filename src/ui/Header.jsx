@@ -8,12 +8,16 @@ const StyledHeader = styled.header`
   width: 100%;
   gap: 2.4rem;
   z-index: 100;
-  background-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
   position: fixed;
   top: 0;
 
   &.active {
-    background-color: var(--color-light-black);
+    background-color: var(--color-black);
   }
 `;
 

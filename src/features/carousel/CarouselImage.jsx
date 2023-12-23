@@ -3,36 +3,25 @@ import styled from "styled-components";
 // import { CiCirclePlus } from "react-icons/ci";
 // import { BsHandThumbsUp } from "react-icons/bs";
 // import { TfiArrowCircleDown } from "react-icons/tfi";
-import { useState } from "react";
 
 const StyledCarouselImage = styled.img`
-  height: 150px;
-  width: 250px;
+  max-height: 130px;
+  width: 100%x;
   background-color: var(--color-pure-white);
   margin-right: 5px;
   border-radius: 0.2rem;
   overflow: hidden;
-  object-fit: fill;
+  object-fit: contain;
 
   &:hover {
-    transform: scale(1.2);
     transition: all 500ms ease 0s;
+    opacity: 1;
+    transform: scale(1.08);
   }
 `;
 
-function CarouselImage({ src }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <>
-      <StyledCarouselImage
-        src={src}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        {...(isHovered && null)}
-      />
-    </>
-  );
+function CarouselImage({ src, alt }) {
+  return <StyledCarouselImage src={src} alt={alt} />;
 }
 
 export default CarouselImage;

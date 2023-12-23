@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaRegBell } from "react-icons/fa6";
-import { LuUserSquare } from "react-icons/lu";
 
 const StyledIconMenu = styled.ul`
   display: flex;
@@ -13,6 +12,10 @@ const StyledIconMenu = styled.ul`
     font-size: 2rem;
   }
 
+  img {
+    height: 3rem;
+    border-radius: 4px;
+  }
   :hover {
     transition: color 500ms ease-in-out;
     color: var(--color-dark-white);
@@ -30,7 +33,7 @@ function IconMenu() {
         <FaRegBell />
       </li>
       <li>
-        <LuUserSquare />
+        <img src="../../avatar.png" alt="User Avatar" />
       </li>
     </StyledIconMenu>
   );
