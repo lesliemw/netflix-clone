@@ -13,7 +13,7 @@
  
 <h3>This is my rendition of a netflix clone. Using React Query, React Router, and styled components I was able to create this beautiful site.</h3>
 <p>Each page is styled using styled components. </p>
-<p>Using fetchAPI from the TMDB website, I was able to pull data I needed. This data included the image. Using custom hooks, and react query I was able to easily map through the data to find and use what I needed and display it on screen.</p>
+<p>Using fetchAPI from the TMDB website, I was able to pull data I needed. This data included the image used for each card within a carousel. Using custom hooks, and react query I was able to easily map through the data to find and use what I needed and display it on screen.</p>
 
  <br>
   <br>
