@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import NetflixCarousel from "../features/carousel/NetflixCarousel";
 
 const StyledMyList = styled.div`
   overflow: hidden;
@@ -6,7 +7,11 @@ const StyledMyList = styled.div`
 `;
 
 function MyList() {
-  return <StyledMyList>hello</StyledMyList>;
+  return (
+    <StyledMyList>
+      <NetflixCarousel type="popular" title="My List" />
+    </StyledMyList>
+  );
 }
 
 export default MyList;

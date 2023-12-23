@@ -33,7 +33,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </>
@@ -44,7 +44,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -55,7 +55,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -66,7 +66,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -77,7 +77,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -88,7 +88,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -99,7 +99,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -110,7 +110,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -121,7 +121,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
@@ -132,7 +132,7 @@ function MappedComponents({ type, src, alt }) {
               <CarouselImage
                 key={img.id}
                 alt={`Poster for ${img.title}`}
-                src={imgUrl + `${img.poster_path}`}
+                src={imgUrl + `${img.backdrop_path}`}
               />
             ))}
           </div>
