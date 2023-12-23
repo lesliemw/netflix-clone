@@ -21,7 +21,7 @@
  <br>
  <br>
 
-<p>While the site is mostly complete from a front-end perspective, features that will be added at a later date for backend tasks include:</p>
+<p>While the site is mostly complete from a front-end perspective, features that will be added at a later date for backend tasks (and a few frontend tweaks) include:</p>
 <ol>
  <li>Make the site mobile friendly</li>
   <li>Hover component giving details of the movie/tv show being hovered over</li>
