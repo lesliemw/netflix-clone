@@ -23,6 +23,7 @@
 
 <p>While the site is mostly complete from a front-end perspective, features that will be added at a later date for backend tasks include:</p>
 <ol>
+ <li>Make the site mobile friendly</li>
   <li>Hover component giving details of the movie/tv show being hovered over</li>
   <li>User login page</li>
   <li>Authentication using supabase, firebase, or mongoDb</li>
